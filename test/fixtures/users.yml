@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  notes: MyString
+  current_cart: MyString
+  order: MyString
+  order_history: MyString
+
+two:
+  username: MyString
+  password_digest: MyString
+  notes: MyString
+  current_cart: MyString
+  order: MyString
+  order_history: MyString

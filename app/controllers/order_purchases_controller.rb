@@ -1,0 +1,2 @@
+class OrderPurchasesController < ApplicationController
+end
