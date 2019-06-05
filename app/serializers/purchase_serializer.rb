@@ -1,3 +1,4 @@
 class PurchaseSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :product
+  belongs_to :product
 end

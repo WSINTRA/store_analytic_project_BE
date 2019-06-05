@@ -5,12 +5,9 @@ class Api::V1::CartsController < ApplicationController
 	def index
 		binding.pry
 	end
-	
-    def new
-    	@cart = Cart.new
-    end
 
 	def create
+		binding.pry
 		@cart = Cart.create(cart_params)
 	end
 	

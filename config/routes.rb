@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :order_purchases
-  resources :purchases
-  resources :orders
+  resources :orders, only: [:create, :index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 namespace :api do
     namespace :v1 do
