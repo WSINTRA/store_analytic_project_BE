@@ -1,7 +1,8 @@
 class OrdersController < ApplicationController
 
 	def create
-        order = Order.create(user_id: params[:user][:id])
+        order = Order.create(user_id: params[:user][:id], total:params[:total])
+        
         params[:order].each { |x| Purchase.create(product_id: x[:id]) }
 		#params[:order].each {|x| puts "the current item ID is #{x[:id]}"}
 		params[:order].each do |x| 

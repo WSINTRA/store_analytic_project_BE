@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_06_05_145130) do
 
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
+    t.decimal "total", precision: 8, scale: 2
+    t.decimal "decimal", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

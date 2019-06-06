@@ -4,4 +4,5 @@ skip_before_action :authorized, only: [:index]
      category = Category.all
      render json: category
 	 end
+    
 end

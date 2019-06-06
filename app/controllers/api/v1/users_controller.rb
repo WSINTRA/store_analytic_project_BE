@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
  def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
-
+  
   
   def create
     @user = User.create(user_params)
@@ -15,6 +15,15 @@ class Api::V1::UsersController < ApplicationController
     else
       render json: { error: 'failed to create user, username may already exist or an error occured' }, status: :not_acceptable
     end
+  end
+
+  def updateCart
+    current_user = User.find(params[:user][:id])
+    current_user.cart.destroy
+    user_cart = Cart.create(user_id: current_user.id)
+    params[:order].each do |x| user_cart.products << Product.find(x[:id]) end
+      render json: current_user
+
   end
  
   private

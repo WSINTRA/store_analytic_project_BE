@@ -1,11 +1,11 @@
 
 require 'faker'
 
-ProductCategory.destroy_all
-Product.destroy_all
-Category.destroy_all
-Cart.destroy_all
-User.destroy_all
+# ProductCategory.destroy_all
+# Product.destroy_all
+# Category.destroy_all
+# Cart.destroy_all
+# User.destroy_all
 
 
 cat1 = Category.create(category_name:"New Strains")
@@ -26,11 +26,12 @@ array = [cat1,cat2,cat3,cat4,cat5,cat6]
 		state: Faker::Address.state,
 		email: Faker::Internet.email,
 		password: "fake"   )
+	Cart.create(user_id: User.last.id)
 	
 end
 
 User.create(first_name: 'Will', last_name: 'Simpson', email: 'will.simpson85@gmail.com', admin: true, password: 'admin')
-
+Cart.create(user_id: User.last.id)
 30.times do 
 	Product.create(
 		name: Faker::Cannabis.strain, 
