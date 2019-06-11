@@ -7,11 +7,12 @@ namespace :api do
       
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
+      patch '/updateCart', to: 'users#updateCart'
     end
   end
 namespace :api do
 	namespace :v1 do
-		resources :products, only: [:index]
+		resources :products, only: [:create, :index]
 	end
 end
 
