@@ -1,24 +1,7 @@
-# README
+DEMO Store Backend, 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API Built using rails. Has user authentification and products. 
+https://secret-savannah-72600.herokuapp.com/category
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Front End
+https://wsintra.github.io/store_analytic_project_FE
