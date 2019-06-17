@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_145130) do
+ActiveRecord::Schema.define(version: 2019_06_14_184652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2019_06_05_145130) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "frontads", force: :cascade do |t|
+    t.string "banner_url"
+    t.string "side_url"
+    t.string "video_url"
+    t.string "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

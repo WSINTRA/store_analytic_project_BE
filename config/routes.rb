@@ -16,6 +16,7 @@ namespace :api do
 	end
 end
 
-resources :category
+resources :category, only: [:index]
+resources :frontad, only: [:create, :index]
 
 end
